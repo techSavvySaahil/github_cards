@@ -1,0 +1,84 @@
+div{
+			box-sizing: border-box;
+		}
+		.pointer{
+			cursor:pointer;
+		}
+		form{
+			background-color: #34c7c7;
+		    padding: 10px;
+		    width: 250px;
+		    border-radius: 5px;
+		}
+		form input{
+			border: 1px solid deepskyblue;
+		    border-radius: 5px;
+		    padding: 5px;
+		}
+		form button{
+			background-color: #4097a2;
+		    border: 0px;
+		    color: white;
+		    border-radius: 3px;
+		    padding: 2px;
+		    margin-left: 11px;
+		    width: 50px;
+		}
+		.sorting{
+			background-color: #7bb8ec;
+		    padding: 1% 0;
+		    border-radius: 5px;
+		    color: whitesmoke;
+		}
+		.sorting span{
+			margin: 0 6%;
+			vertical-align: middle;
+			padding: 0.7% 2%;
+    		border-radius: 5px;
+		}
+		.active{
+			color:#7bb8ec;
+			background-color:white;
+		}
+		.user-box{
+		    display: inline-block;
+		    box-sizing: border-box;
+		    position: relative;
+		    max-width: 200px;
+		    min-width: 150px;
+		    border: 1px solid lightgray;
+		    margin: 1vw;
+		    padding: 1%;
+		    vertical-align: top;
+		}
+		div.user-box:hover{
+			border-color:gray;
+			text-decoration:underline;
+		}
+		.user-box div{
+			height: 72px;
+		}
+		img{
+			width:100%;
+		}
+		.close{
+		    float: right;
+		    position: absolute;
+		    right: 14px;
+		    font-size: 14px;
+		    top: 14px;
+		    background-color: whitesmoke;
+		    z-index: 1;
+		    border-radius: 4px;
+		}
+		@media only screen and (max-width: 767px){
+			.sorting span{
+				margin: 0 3%;
+				padding: 0.7% 1%;
+			}
+		}
+		@media only screen and (max-width: 350px){
+			.sorting span{
+				margin: 0 2%;
+			}
+		}

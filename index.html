@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GitHub Cards</title>
+	<link rel="shortcut icon" href="git.ico" type="image/x-icon">
+	<script type="text/javascript" src="angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body ng-app="app" ng-controller="MainCtrl">
+	<form name="new-user">
+		<input placeholder="Github Login" ng-model="newUser.login" autofocus>
+		<button class="pointer" type="submit" ng-click="addUser(newUser)">Add</button>
+	</form>
+	<br>
+	<div class="sorting" ng-if="users.length"><span>Sort By : </span><span class="pointer" ng-class="{'active' : newUser.key === 'name'}" ng-click="changeFilter('name')"> Name <i ng-class="{'fa fa-angle-down' : newUser.key === 'name'}"></i></span><span class="pointer" ng-class="{'active' : newUser.key === 'location'}" ng-click="changeFilter('location')"> Location <i ng-class="{'fa fa-angle-down' : newUser.key === 'location'}"></i></span><span class="pointer" ng-class="{'active' : newUser.key === 'followers'}" ng-click="changeFilter('followers', true)"> Followers <i ng-class="{'fa fa-angle-down' : newUser.key === 'followers'}"></i></span></div>
+	<br>
+	<div class="user-box" ng-repeat="user in users track by user.id">
+		<i class="fa fa-times pointer close" ng-click="removeUser($index, $event)"></i>
+		<img class="pointer" ng-src="{{user.image}}" ng-click="goToProfile($index)">
+		<hr>
+		<div>
+			<span ng-bind="user.name"></span>
+			<br>
+			<span>Location : </span><span ng-bind="user.location"></span>
+			<br>
+			<span>Followers : </span><span ng-bind="user.followers"></span>
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
