@@ -1,4 +1,4 @@
-div{
+		div{
 			box-sizing: border-box;
 		}
 		.pointer{
@@ -7,13 +7,15 @@ div{
 		form{
 			background-color: #34c7c7;
 		    padding: 10px;
-		    width: 250px;
+		    min-width: 200px;
+		    width: 34%;
 		    border-radius: 5px;
 		}
 		form input{
 			border: 1px solid deepskyblue;
 		    border-radius: 5px;
 		    padding: 5px;
+		    width: 60%;
 		}
 		form button{
 			background-color: #4097a2;
