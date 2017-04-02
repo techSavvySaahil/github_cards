@@ -14,17 +14,17 @@
 		form input{
 			border: 1px solid deepskyblue;
 		    border-radius: 5px;
-		    padding: 5px;
-		    width: 60%;
+		    padding: 2%;
+		    width: 62%;
 		}
 		form button{
 			background-color: #4097a2;
 		    border: 0px;
 		    color: white;
 		    border-radius: 3px;
-		    padding: 2px;
-		    margin-left: 11px;
-		    width: 50px;
+		    padding: 7px;
+		    margin-left: 5%;
+		    width: 25%;
 		}
 		.sorting{
 			background-color: #7bb8ec;
